@@ -1,0 +1,22 @@
+{
+  "name": "nana",
+  "version": "1.0.0",
+  "description": "svg editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yijq/nana.git"
+  },
+  "keywords": [
+    "svg"
+  ],
+  "author": "yijq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yijq/nana/issues"
+  },
+  "homepage": "https://github.com/yijq/nana#readme"
+}
