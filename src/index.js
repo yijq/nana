@@ -145,8 +145,8 @@ function drawing(e) {
 
 function drawEnd(e) {
   SvgCanvas.isDrawing = false;
-  
-  if(SvgCanvas.paths) {
+
+  if(!SvgCanvas.paths) {
     SvgCanvas.paths = [];
   }
 
