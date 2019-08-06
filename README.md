@@ -1,5 +1,3 @@
 # nana
 
-A light svg library.
-
-Make it for a girl.
+A light svg editor.
