@@ -1,2 +1,3 @@
 # nana
-A light svg library.
+
+A light svg editor.

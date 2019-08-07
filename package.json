@@ -1,0 +1,35 @@
+{
+  "name": "nana",
+  "version": "1.0.0",
+  "description": "svg editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config ./config/webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yijq/nana.git"
+  },
+  "keywords": [
+    "svg"
+  ],
+  "author": "yijq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yijq/nana/issues"
+  },
+  "homepage": "https://github.com/yijq/nana#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.0-beta.0",
+    "css-loader": "^3.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  }
+}
