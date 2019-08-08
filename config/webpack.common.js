@@ -50,5 +50,7 @@ module.exports = {
 
     ]
   },
-  plugins: [new HtmlWebpackPlugin()]
+  plugins: [new HtmlWebpackPlugin({
+    template: path.resolve(publicPath, "./index.html")
+  })]
 }
