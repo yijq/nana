@@ -10,7 +10,7 @@ const entry = {
 }
 
 module.exports = {
-  mode: "development", // "production" | "development" | "none",
+  mode: "production", // "production" | "development" | "none",
   devtool: "source-map", // enum,
   entry: entry,
   output: {
@@ -50,7 +50,9 @@ module.exports = {
 
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: path.resolve(publicPath, "./index.html")
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(publicPath, "./index.html")
+    })
+  ]
 }

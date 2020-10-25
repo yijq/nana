@@ -2,7 +2,7 @@
 import { SvgDom } from "./svg-dom/svg-base";
 import "./style.css";
 
-const RootDom = document.querySelector("#canvas-section");
+const RootDom = document.querySelector("#canvas_section");
 const RootWrapper = new SvgDom(RootDom);
 
 const SvgCanvas = new SvgDom();
@@ -40,19 +40,19 @@ SvgCanvas.viewBox = {
   height:clientHeight
 }
 
-const Rect = new SvgDom();
-Rect.create("rect");
-Rect.attr({
-  "x": "100",
-  "y": "100",
-  "width": "100",
-  "height": "100",
-  "stroke": "#f0f",
-  "stroke-width": "3",
-  "fill": "none"
-})
+// const Rect = new SvgDom();
+// Rect.create("rect");
+// Rect.attr({
+//   "x": "100",
+//   "y": "100",
+//   "width": "100",
+//   "height": "100",
+//   "stroke": "#f0f",
+//   "stroke-width": "3",
+//   "fill": "none"
+// })
 
-SvgCanvas.appendChild(Rect);
+// SvgCanvas.appendChild(Rect);
 
 //point
 class Point {
@@ -78,7 +78,20 @@ class Point {
  * @param {Point} point 
  * @return {Point}
  */
-const clientToSvgCanvasCoordinate = (point) => (point);
+const clientToSvgCanvasCoordinate = (point) => {
+  const CTM = SvgCanvas.dom.getScreenCTM();
+  const svgPoint = SvgCanvas.dom.createSVGPoint();
+
+  svgPoint.x = point.position.x;
+  svgPoint.y = point.position.y;
+
+  const _svgPoint = svgPoint.matrixTransform(CTM.inverse());
+
+  const _point = new Point()
+  _point.set(_svgPoint.x, _svgPoint.y);
+  
+  return _point;
+};
 
 //zoom
 
@@ -118,7 +131,7 @@ function drawStart(e) {
   });
 
   drawingPath.attr({
-    "stroke": "#ff0",
+    "stroke": "#000",
     "fill": "none"
   });
 

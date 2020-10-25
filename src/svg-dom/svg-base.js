@@ -30,7 +30,7 @@ const _appendChild = (dom, child) => {
 export const SvgDom = function(dom) {
   if(dom) {
     this.dom = dom;
-  }
+  } 
 };
 
 SvgDom.prototype.create = function(type) {

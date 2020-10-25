@@ -1,9 +1,5 @@
 /********* simple reset **********/
-* {
-  margin: 0;
-  padding: 0;
-}
-
+@import "./reset.css";
 /**********************************/
 
 /********* app **********/
@@ -13,11 +9,38 @@ html, body {
 
 #app {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-#canvas-section {
+#top_section {
+  height: 50px;
+  background: linear-gradient(#ddd, #fff);
+
+  font-size: 20px;
+}
+
+#top_section > h2 {
+  font-weight: bold;
+  margin: 10px;
+}
+
+#main_section {
+  flex: 1;
   height: 100%;
-  background-color: rgba(179, 155, 235, 0.8)
+  display: flex;
+}
+
+#toolbar {
+  height: 100%;
+  width: 50px;
+  background: linear-gradient(to right, #ddd, #fff);
+}
+
+#canvas_section {
+  height: 100%;
+  flex: 1;
+  /* background-color: aqua; */
 }
 
 /**********************************/
